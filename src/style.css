@@ -1,0 +1,186 @@
+:root {
+    --bg-white: #fff;
+    --text-white: #fff;
+    --bg-dark: #000;
+    --text-dark: #000;
+    --bg-green: #009669;
+    --text-green: #009669;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Mulish', sans-serif !important;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-white);
+    font-size: 1.6rem;
+}
+
+/* ---- begin login page ----- */
+.loginPage, .registerPage, .forgotPasswordPage {
+    height: 100vh;
+}
+
+.formWrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 50px 15px;
+}
+
+.formWrapper h1  {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+.socailBtn {
+    background: transparent;
+    padding: 12px 40px;
+    border: 2px solid #e9e9e9;
+    border-radius: 4px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin: 30px auto;
+    gap: 5px;
+}
+
+.orText {
+    position: relative;
+    margin: 20px auto;
+    padding: 0 6px;
+    color: #7e7e7e;
+    text-align: center;
+}
+
+.orText:before,
+.orText:after {
+    content: "";
+    height: 1px;
+    width: 100px;
+    background-color: #e3e3e3;
+    position: absolute;
+    top: 57%;
+    left: 75px;
+}
+
+.orText:after {
+    left: 295px;
+}
+
+.formLogo {
+    max-width: 250px;
+}
+
+.socailBtn img {
+    width: 20px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.main_forms .form-control {
+    height: 50px;
+    font-size: 1.5rem;
+}
+
+.main_forms .control-label {
+    margin-bottom: 6px;
+}
+
+.formActions {
+    background-color: var(--bg-green);
+    border: 0;
+    display: block;
+    width: 100%;
+    padding: 14px;
+    font-size: 1.8rem;
+    color: var(--text-white);
+    font-weight: 800;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    margin-top: 30px;
+}
+
+.formActions:hover {
+    background-color: #047251;
+}
+
+.forgotpass {
+    text-align: right;
+}
+
+.formLinks {
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--text-green);
+}
+
+.formLinks:hover {
+    color: #047251;
+}
+
+.login_bg_image {
+    background: url(./images/login-bg.webp);
+}
+
+.register_bg_image{
+    background: url(./images/register_bg.webp);
+}
+
+.changePass_bg{
+    background: url(./images/forgot_bg.webp);
+}
+
+.bs_cover{
+    background-size: cover;
+}
+
+.backtoLogin {
+    display: block;
+    margin-top: 20px;
+    border: 1px solid #c3c3c3;
+    background: transparent;
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    color: #222;
+}
+
+.backtoLogin:hover {
+    background: #688bf3;
+    color: #fff;
+}
+
+.registerPage .main_forms,
+.changePassword .main_forms {
+    margin-top: 50px;
+}
+
+@media(max-width: 768px) {
+    .login_bg_image {
+        height: 100%;
+    }
+}
