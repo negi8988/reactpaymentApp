@@ -1,8 +1,25 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import Logo from './images/logo.png';
+import { useFormik } from 'formik';
+
+
+
+const initialValues = {
+    userEmail: '',
+    userPassword: '',
+
+}
 
 export const Register = () => {
+
+    const { values, errors, touched, handleBlur, handleChange, handleSubmit } = useFormik({
+        initialValues: initialValues,
+        onSubmit: (values) => {
+            console.log(values);
+        }
+    });
+
     return (
         <>
             <div className='registerPage'>
@@ -15,25 +32,52 @@ export const Register = () => {
                                 </div>
                                 <h1>Signup & Get Started</h1>
                                 <span className='d-block text-center text-secondary'>Open your account in seconds</span>
-                                <form action="" className='main_forms'>
+
+                                <form onSubmit={handleSubmit} className='main_forms' noValidate>
                                     <div className="form-group">
                                         <label className="control-label">Full Name <sup className="text-danger">*</sup></label>
-                                        <input type="text" name="" id="" className="form-control" placeholder='Enter Your Full Name' required />
+                                        <input
+                                            type="text" name="fullName" id="fullName" className="form-control"
+                                            placeholder='Enter Your Full Name'
+                                            autoComplete='off'
+                                            value={values.fullName}
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                        />
+                                        {errors.userEmail && touched.userEmail ? <p className='formError'>{errors.userEmail}</p> : null}
                                     </div>
-                                    
+
                                     <div className="form-group">
                                         <label className="control-label">Contact Number <sup className="text-danger">*</sup></label>
-                                        <input type="number" name="" id="" className="form-control" placeholder='Enter Your Contact No.' required />
+                                        <input type="number" name="contactNumber" id="contactNumber"
+                                            className="form-control" placeholder='Enter Your Contact No.'
+                                            autoComplete='off'
+                                            value={values.contactNumber}
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                        />
                                     </div>
 
                                     <div className="form-group">
                                         <label className="control-label">Eamil <sup className="text-danger">*</sup></label>
-                                        <input type="email" name="" id="" className="form-control" placeholder='Enter Email' required />
+                                        <input type="email" name="emailId" id="emailId"
+                                            className="form-control" placeholder='Enter Email'
+                                            autoComplete='off'
+                                            value={values.emailId}
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                        />
                                     </div>
 
                                     <div className="form-group">
                                         <label className="control-label">PAN <sup className="text-danger">*</sup></label>
-                                        <input type="text" name="" id="" className="form-control" placeholder='Enter PAN' required />
+                                        <input type="text" name="panCard" id="panCard"
+                                            className="form-control" placeholder='Enter PAN'
+                                            autoComplete='off'
+                                            value={values.panCard}
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                        />
                                     </div>
 
                                     <button type='submit' className='formActions'>Register</button>

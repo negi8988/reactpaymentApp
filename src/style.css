@@ -120,7 +120,7 @@ body {
     padding: 14px;
     font-size: 1.8rem;
     color: var(--text-white);
-    font-weight: 800;
+    font-weight: 600;
     letter-spacing: 1px;
     border-radius: 4px;
     margin-top: 30px;
@@ -190,4 +190,23 @@ body {
     .login_bg_image {
         height: 100%;
     }
+}
+
+
+/* begin inner software inner CSS */
+.topBar {
+    padding: 10px;
+    border-bottom: 1px solid;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    background-color: #fff;
+    width: 100%;
+}
+
+.leftSidebar {
+    position: fixed;
+    top: 56px;
+    background-color: gray;
+    padding: 5px;
 }

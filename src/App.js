@@ -1,9 +1,10 @@
 import React from 'react';
+import { MainComponents } from './layouts/MainComponents';
 
 export const App = () => {
   return (
     <>
-      <h1>default</h1>
+      <MainComponents />
     </>    
   )
 }

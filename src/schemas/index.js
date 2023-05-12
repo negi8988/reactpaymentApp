@@ -5,3 +5,8 @@ export const loginSchema = Yup.object({
     userPassword: Yup.string().required("Please Enter Your Password"),
 
 });
+
+
+export const signupSchema = Yup.object({
+    
+})
